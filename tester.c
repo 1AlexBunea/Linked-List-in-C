@@ -136,44 +136,44 @@ void linked_list_add_tests(struct linked_list *this_linked_list, int *testNumber
     *testNumber += 1;
 }
 
-    void empty_list_tests(struct linked_list *this_linked_list, int *testNumber) {
+void empty_list_tests(struct linked_list *this_linked_list, int *testNumber) {
 
-        for (int i = 0; i < 25; i++) {
-            linked_list_add(this_linked_list, i%7);
-        }
-        empty_list(this_linked_list);
-        bool expectedBool = (linked_list_size(this_linked_list) == 0);
-        if (expectedBool) {
-            printf("test %d passed\n", *testNumber);
-        } else {
-            printf("test %d failed\n", *testNumber);
-        }
-        *testNumber += 1;
-
-        for (int i = -10; i < 3; i++) {
-            linked_list_add(this_linked_list, i);
-        }
-        empty_list(this_linked_list);
-        expectedBool = (linked_list_size(this_linked_list) == 0);
-        if (expectedBool) {
-            printf("test %d passed\n", *testNumber);
-        } else {
-            printf("test %d failed\n", *testNumber);
-        }
-        *testNumber += 1;
-        for (int i = 0; i < 600000; i++) {
-            linked_list_add(this_linked_list, i);
-        }
-        empty_list(this_linked_list);
-        expectedBool = (linked_list_size(this_linked_list) == 0);
-        if (expectedBool) {
-            printf("test %d passed\n", *testNumber);
-        } else {
-            printf("test %d failed\n", *testNumber);
-        }
-        *testNumber += 1;
-
+    for (int i = 0; i < 25; i++) {
+        linked_list_add(this_linked_list, i%7);
     }
+    empty_list(this_linked_list);
+    bool expectedBool = (linked_list_size(this_linked_list) == 0);
+    if (expectedBool) {
+        printf("test %d passed\n", *testNumber);
+    } else {
+        printf("test %d failed\n", *testNumber);
+    }
+    *testNumber += 1;
+
+    for (int i = -10; i < 3; i++) {
+        linked_list_add(this_linked_list, i);
+    }
+    empty_list(this_linked_list);
+    expectedBool = (linked_list_size(this_linked_list) == 0);
+    if (expectedBool) {
+        printf("test %d passed\n", *testNumber);
+    } else {
+        printf("test %d failed\n", *testNumber);
+    }
+    *testNumber += 1;
+    for (int i = 0; i < 600000; i++) {
+        linked_list_add(this_linked_list, i);
+    }
+    empty_list(this_linked_list);
+    expectedBool = (linked_list_size(this_linked_list) == 0);
+    if (expectedBool) {
+        printf("test %d passed\n", *testNumber);
+    } else {
+        printf("test %d failed\n", *testNumber);
+    }
+    *testNumber += 1;
+
+}
 
 int main() {
 
