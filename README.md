@@ -1,1 +1,1 @@
-Implementation of a single-linked linked list in C
+Implementation of a singly-linked linked list in C
