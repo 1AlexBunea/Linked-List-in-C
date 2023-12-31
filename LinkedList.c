@@ -80,7 +80,6 @@ void linked_list_add(struct linked_list *this_linked_list, int value) {
 }
 
 void linked_list_remove(struct linked_list *this_linked_list, int index) {
-    int counter = 0;
     if (index == 0) {
         struct LLNode *temp = (*this_linked_list).head;
         if (this_linked_list->size == 1) { //only 1 element in the list
